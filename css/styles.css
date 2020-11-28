@@ -73,6 +73,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -304,6 +310,15 @@ a {
 }
 
 /* Flexbox and containers */
+header {
+  border-bottom: 1px solid #ececec;
+}
+
+.container.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .section.features {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -311,11 +326,13 @@ a {
 
 .feature-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .feature-item {
   width: 270px;
+}
+.feature-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .section.examples {
@@ -324,7 +341,10 @@ a {
 
 .example-list {
   display: flex;
-  justify-content: space-between;
+}
+
+.example-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .section.crew {
@@ -334,22 +354,26 @@ a {
 
 .crew-list {
   display: flex;
-  justify-content: space-between;
 }
 
-.crew-list .photo {
-  margin-bottom: 30px;
+.crew-card:not(:last-child) {
+  margin-right: 30px;
 }
+
+.crew-list .personal-info {
+  padding-top: 30px;
+  padding-right: 58px;
+  padding-bottom: 30px;
+  padding-left: 58px;
+}
+
 .crew-list .title {
   margin-bottom: 10px;
 }
-.crew-list .position {
-  margin-bottom: 30px;
-}
 
 .container.selectors {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .selector {
@@ -368,7 +392,8 @@ a {
 }
 
 .project-item {
-  width: 370px;
+  width: calc((100% - 60px) / 3);
+  /*width: 370px;*/
   border: 1px solid #eeeeee;
   margin-right: 30px;
   margin-bottom: 30px;
@@ -383,7 +408,7 @@ a {
 }
 
 .project-item .group {
-  margin: 20px 24px;
+  padding: 20px 24px;
 }
 
 .project-item .title {
